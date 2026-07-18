@@ -33,7 +33,7 @@
             {
               home-manager.users.ragef = {
                 imports = [
-                  dots.homeManagerModules.fullSystem
+                  dots.homeManagerModules.default
                   (personal-config + "/home.nix")
                 ];
               };
