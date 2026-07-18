@@ -10,24 +10,39 @@
     dots = {
       url = "github:rvsfirecreeper/dots";
     };
-  };
-
-  outputs = { nixpkgs, home-manager, dots, ... }:
-  {
-    nixosConfigurations = {
-      pcnix = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-
-        modules = [
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.users.ragef = dots.homeManagerModules.fullSystem;
-            home-manager.backupFileExtension = "backup";
-          }
-          ./configuration.nix
-          ./hardware-configuration.nix
-        ];
-      };
+    personal-config = {
+      url = "github:rvsfirecreeper/nixos-config";
     };
   };
+
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      dots,
+      personal-config,
+      ...
+    }:
+    {
+      nixosConfigurations = {
+        pcnix = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+
+          modules = [
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.users.ragef = {
+                imports = [
+                  dots.homeManagerModules.fullSystem
+                  (personal-config + "/home.nix")
+                ];
+              };
+              home-manager.backupFileExtension = "backup";
+            }
+            ./configuration.nix
+            ./hardware-configuration.nix
+          ];
+        };
+      };
+    };
 }
