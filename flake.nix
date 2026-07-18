@@ -10,9 +10,6 @@
     dots = {
       url = "github:rvsfirecreeper/dots";
     };
-    personal-config = {
-      url = "github:rvsfirecreeper/nixos-config";
-    };
   };
 
   outputs =
@@ -20,7 +17,6 @@
       nixpkgs,
       home-manager,
       dots,
-      personal-config,
       ...
     }:
     {
@@ -34,7 +30,7 @@
               home-manager.users.ragef = {
                 imports = [
                   dots.homeManagerModules.default
-                  (personal-config + "/home.nix")
+                  ./home.nix
                 ];
               };
               home-manager.backupFileExtension = "backup";
