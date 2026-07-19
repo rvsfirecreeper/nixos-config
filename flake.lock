@@ -6,11 +6,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1784435017,
-        "narHash": "sha256-7rwj4jEkO6GSeSaoksslQduMZ7xEcGi6XFUQDARboGY=",
+        "lastModified": 1784436079,
+        "narHash": "sha256-7EM4+yGYJ2GRg8SkC7kaKCFuodfCvduPf6Xo92FjiTM=",
         "owner": "rvsfirecreeper",
         "repo": "dots",
-        "rev": "8b93d5e9898aa978dc053d9f4cdabc30e12ac97b",
+        "rev": "7e13b7b8a6cab0a0e375ebf9bdece3f4add84a84",
         "type": "github"
       },
       "original": {
