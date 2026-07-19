@@ -19,16 +19,21 @@
       options = [ "subvol=@nixroot" ];
     };
 
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/93e10387-75ba-4f7a-a717-019420f7ac62";
-      fsType = "btrfs";
-      options = [ "subvol=@home" ];
+  fileSystems."/boot" =
+    { device = "systemd-1";
+      fsType = "autofs";
     };
 
   fileSystems."/games" =
     { device = "/dev/disk/by-uuid/93e10387-75ba-4f7a-a717-019420f7ac62";
       fsType = "btrfs";
       options = [ "subvol=@games" ];
+    };
+
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/93e10387-75ba-4f7a-a717-019420f7ac62";
+      fsType = "btrfs";
+      options = [ "subvol=@home" ];
     };
 
   swapDevices =

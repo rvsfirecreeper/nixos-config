@@ -21,7 +21,7 @@
     }:
     {
       nixosConfigurations = {
-        pcnix = nixpkgs.lib.nixosSystem {
+        desktop = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
 
           modules = [
@@ -36,7 +36,7 @@
               home-manager.backupFileExtension = "backup";
             }
             ./configuration.nix
-            ./hardware-configuration.nix
+            ./hosts/desktop/hardware-configuration.nix
           ];
         };
       };
