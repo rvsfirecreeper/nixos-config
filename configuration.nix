@@ -12,8 +12,7 @@
   services.udev.extraRules = ''
     KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
   '';
-  # networking.hostName = "nixos"; # Define your hostname.
-
+  networking.hostName = "wrajnix"; # Define your hostname.
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
 
