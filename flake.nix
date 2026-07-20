@@ -37,6 +37,7 @@
             }
             ./configuration.nix
             ./hosts/desktop/hardware-configuration.nix
+            ./linker-fixes.nix
           ];
         };
       };
