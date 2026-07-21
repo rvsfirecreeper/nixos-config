@@ -65,18 +65,13 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ragef = {
     isNormalUser = true;
-    uid = 1000;
     extraGroups = [
       "wheel"
-      "ragef"
       "input"
       "uinput"
     ]; # Enable ‘sudo’ for the user.
     home = "/home/ragef";
     shell = pkgs.fish;
-  };
-  users.groups.ragef = {
-    gid = 1000;
   };
   users.groups.uinput = { };
   # programs.firefox.enable = true;
