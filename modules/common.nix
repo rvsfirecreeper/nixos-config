@@ -5,15 +5,11 @@
 { pkgs, ... }:
 
 {
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
   # Kanata stuff
   boot.kernelModules = [ "uinput" ];
   services.udev.extraRules = ''
     KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
   '';
-  networking.hostName = "wrajnix"; # Define your hostname.
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
 

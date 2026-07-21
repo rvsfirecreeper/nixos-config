@@ -35,9 +35,7 @@
               };
               home-manager.backupFileExtension = "backup";
             }
-            ./configuration.nix
-            ./hosts/desktop/hardware-configuration.nix
-            ./linker-fixes.nix
+            ./hosts/desktop/default.nix
           ];
         };
       };
