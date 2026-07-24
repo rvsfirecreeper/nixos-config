@@ -16,5 +16,7 @@
     yubikey-personalization
     keepassxc
     nil
+    proton-vpn
+    owmods-gui
   ];
 }
