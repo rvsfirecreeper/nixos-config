@@ -30,7 +30,7 @@
               home-manager.users.ragef = {
                 imports = [
                   dots.homeManagerModules.default
-                  ./home.nix
+                  ./modules/gui-packages.nix
                 ];
               };
               home-manager.backupFileExtension = "backup";
