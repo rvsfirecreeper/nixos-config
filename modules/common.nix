@@ -49,13 +49,10 @@
       "input"
       "uinput"
     ]; # Enable ‘sudo’ for the user.
-    home = "/home/ragef";
     shell = pkgs.fish;
   };
   users.groups.uinput = { };
   # programs.firefox.enable = true;
-  programs.fish.enable = true;
-  programs.hyprland.enable = true;
   programs.gnupg.agent = {
     enable = true;
     pinentryPackage = pkgs.pinentry-qt;
@@ -63,7 +60,6 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    ly
     helix
     wget
     gnupg

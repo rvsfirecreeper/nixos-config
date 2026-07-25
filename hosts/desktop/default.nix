@@ -6,6 +6,7 @@
     ../../modules/common.nix
     ../../modules/linker-fixes.nix
     ../../modules/bluetooth.nix
+    ../../modules/gui-packages-system.nix
   ];
 
   networking.hostName = "wrajnix";
