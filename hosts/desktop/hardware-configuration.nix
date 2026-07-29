@@ -20,8 +20,8 @@
     };
 
   fileSystems."/boot" =
-    { device = "systemd-1";
-      fsType = "autofs";
+    { device = "/dev/disk/by-uuid/9723-E6CC";
+      fsType = "vfat";
     };
 
   fileSystems."/games" =
