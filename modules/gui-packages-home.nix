@@ -16,7 +16,7 @@
     yubikey-personalization
     keepassxc
     nil
-    proton-vpn
+    flatpak
     owmods-gui
   ];
 }
