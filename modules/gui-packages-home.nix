@@ -16,7 +16,6 @@
     yubikey-personalization
     keepassxc
     nil
-    flatpak
     owmods-gui
   ];
 }
