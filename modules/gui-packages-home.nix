@@ -8,6 +8,7 @@
     jdk25
     prismlauncher
     gcc
+    godot
     tree
     zed-editor
     wl-clipboard
