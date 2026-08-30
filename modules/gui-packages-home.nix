@@ -3,7 +3,7 @@
   home.stateVersion = "26.05";
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    floorp-bin
+    ungoogled-chromium
     rustup
     jdk25
     prismlauncher
