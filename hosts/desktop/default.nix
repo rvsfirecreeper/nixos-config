@@ -9,7 +9,7 @@
     ../../modules/gui-packages-system.nix
   ];
 
-  networking.hostName = "wrajnix";
+  networking.hostName = "wellwellwell";
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

@@ -4,6 +4,8 @@
   programs.fish.enable = true;
   services.flatpak.enable = true;
   services.gnome.gnome-keyring.enable = true;
+  networking.networkmanager.enable = true;
+  security.polkit.enable = true;
   environment.systemPackages = with pkgs; [
     ly
     kanata
