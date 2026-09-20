@@ -7,6 +7,7 @@
     rustup
     jdk25
     prismlauncher
+    en-croissant
     gcc
     godot
     tree
