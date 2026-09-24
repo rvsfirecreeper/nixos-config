@@ -4,6 +4,7 @@
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     ungoogled-chromium
+    librewolf
     rustup
     jdk25
     prismlauncher
@@ -19,5 +20,6 @@
     keepassxc
     nil
     owmods-gui
+    obsidian
   ];
 }
