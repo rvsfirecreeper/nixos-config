@@ -6,7 +6,6 @@
     {
       home.packages = with pkgs; [
         rustup
-        jdk25
         gcc
         godot
         zed-editor
