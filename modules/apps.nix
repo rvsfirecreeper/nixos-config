@@ -12,6 +12,7 @@
     {
       home.packages = with pkgs; [
         librewolf
+        ncdu
         obsidian
         ente-auth
         en-croissant
