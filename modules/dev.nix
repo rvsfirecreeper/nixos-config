@@ -6,7 +6,7 @@
     {
       home.packages = with pkgs; [
         rustup
-        rustrover
+        jetbrains.rust-rover
         gcc
         godot
         zed-editor
