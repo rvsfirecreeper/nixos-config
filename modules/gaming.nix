@@ -6,6 +6,7 @@
     {
       home.packages = with pkgs; [
         steam
+        winetricks
         jdk25
         lutris
         prismlauncher
