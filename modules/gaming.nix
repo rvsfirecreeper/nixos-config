@@ -7,6 +7,7 @@
       home.packages = with pkgs; [
         steam
         jdk25
+        lutris
         prismlauncher
         owmods-gui
       ];
