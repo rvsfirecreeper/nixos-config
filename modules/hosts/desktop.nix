@@ -12,6 +12,7 @@
   flake.modules.nixos.desktop-host = {
     imports =
       (with config.flake.modules.nixos; [
+        affinity
         base
         desktop
         hyprland
