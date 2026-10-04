@@ -6,6 +6,7 @@
     {
       home.packages = with pkgs; [
         rustup
+        claude-code
         gcc
         godot
         zed-editor
