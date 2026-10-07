@@ -15,6 +15,7 @@
         librewolf
         ncdu
         ente-auth
+        bitwarden-desktop
         en-croissant
       ];
     };
