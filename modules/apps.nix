@@ -5,6 +5,7 @@
     { ... }:
     {
       services.flatpak.enable = true;
+      programs.coolercontrol.enable = true;
     };
 
   flake.modules.homeManager.apps =
@@ -13,7 +14,6 @@
       home.packages = with pkgs; [
         librewolf
         ncdu
-        obsidian
         ente-auth
         en-croissant
       ];
