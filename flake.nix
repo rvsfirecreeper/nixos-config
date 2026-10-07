@@ -1,14 +1,7 @@
 {
   description = "RajLab NixOS configuration";
 
-  nixConfig = {
-    extra-substituters = [ "https://cache.forall.systems" ];
-    extra-trusted-public-keys = [
-      "cache.forall.systems:5PmD7QO4MSF8YgyRZtkSGXRDo96H3bybIf2SsQh8ScI="
-    ];
-  };
   inputs = {
-    affinity-nix.url = "github:mrshmllow/affinity-nix";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
