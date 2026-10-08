@@ -3,16 +3,15 @@
 {
   flake.nixosConfigurations.desktop = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
-    modules = [
-      inputs.home-manager.nixosModules.home-manager
-      config.flake.modules.nixos.desktop-host
-    ];
+    modules = [ config.flake.modules.nixos.desktop-host ];
   };
 
   flake.modules.nixos.desktop-host = {
     imports =
       (with config.flake.modules.nixos; [
         base
+        boot-uefi
+        home-manager-host
         desktop
         hyprland
         apps
@@ -26,19 +25,13 @@
 
     networking.hostName = "heres-my-nix-flake";
 
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
-
-    home-manager.backupFileExtension = "backup";
-    home-manager.users.ragef.imports =
-      [ inputs.dots.homeManagerModules.default ]
-      ++ (with config.flake.modules.homeManager; [
-        base
-        hyprland
-        apps
-        dev
-        gaming
-        security-keys
-      ]);
+    home-manager.users.ragef.imports = with config.flake.modules.homeManager; [
+      base
+      hyprland
+      apps
+      dev
+      gaming
+      security-keys
+    ];
   };
 }
