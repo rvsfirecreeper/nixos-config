@@ -14,6 +14,15 @@ in
     {
       # Configure network connections interactively with nmcli or nmtui.
       networking.networkmanager.enable = true;
+      networking.stevenblack = {
+        enable = true;
+        block = [
+          "porn"
+          "gambling"
+          "social"
+          "fakenews"
+        ];
+      };
 
       # Resolve everything through Quad9 over DNS-over-TLS. NetworkManager
       # must not hand the router's DHCP DNS servers to resolved: they don't
