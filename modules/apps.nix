@@ -17,6 +17,7 @@
         ente-auth
         bitwarden-desktop
         en-croissant
+        mullvad-browser # alternate browser for less private sites
       ];
     };
 }
