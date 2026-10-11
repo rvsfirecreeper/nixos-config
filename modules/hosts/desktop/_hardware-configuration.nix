@@ -24,9 +24,13 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+  boot.initrd.luks.devices."cryptroot" = {
+    device = "/dev/disk/by-uuid/8603bad5-a47a-44b8-8471-f82f46fa95a2";
+    allowDiscards = true;
+  };
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/93e10387-75ba-4f7a-a717-019420f7ac62";
+    device = "/dev/mapper/cryptroot";
     fsType = "btrfs";
     options = [
       "subvol=@nixroot"
@@ -40,13 +44,13 @@
   };
 
   fileSystems."/games" = {
-    device = "/dev/disk/by-uuid/93e10387-75ba-4f7a-a717-019420f7ac62";
+    device = "/dev/mapper/cryptroot";
     fsType = "btrfs";
     options = [ "subvol=@games" ];
   };
 
   fileSystems."/home" = {
-    device = "/dev/disk/by-uuid/93e10387-75ba-4f7a-a717-019420f7ac62";
+    device = "/dev/mapper/cryptroot";
     fsType = "btrfs";
     options = [
       "subvol=@home"
