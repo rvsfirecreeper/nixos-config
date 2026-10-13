@@ -14,6 +14,7 @@
       home.packages = with pkgs; [
         librewolf
         ncdu
+        syncthing
         ente-auth
         bitwarden-desktop
         en-croissant
