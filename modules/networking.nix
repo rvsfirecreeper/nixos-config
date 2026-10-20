@@ -39,6 +39,20 @@ in
         };
       };
 
-      services.openssh.enable = true;
+      services.openssh = {
+        enable = true;
+        settings = {
+          PasswordAuthentication = false;
+          KbdInteractiveAuthentication = false;
+        };
+      };
+
+      # Authenticate once with `sudo tailscale up`.
+      services.tailscale = {
+        enable = true;
+        openFirewall = true;
+        useRoutingFeatures = "client";
+      };
+      networking.firewall.trustedInterfaces = [ "tailscale0" ];
     };
 }
